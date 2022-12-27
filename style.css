@@ -1,0 +1,514 @@
+@import url(http://db.onlinewebfonts.com/c/c230ecbf5e13583fc4c70a14726c9055?family=Tangerine);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Nerko+One);
+@import url(https://fonts.googleapis.com/css2?family=Zen+Dots);
+
+*{
+  font-family: 'poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+*::selection{
+  background-color: goldenrod;
+}
+/*navbar start*/
+.header{
+  color: white;
+}
+.header a{
+  color: white;
+}
+.header a:active{
+  color: goldenrod;
+}
+nav{
+  background-color: #DC143C;
+  display: flex;
+  width: 100%;
+  height: 70vh;
+  justify-content: space-between;
+}
+nav img{
+  height: 170px;
+  width: 200px;
+}
+.nav_links{
+  padding-top: 20px;
+  display: flex;
+  height: 200px;
+  flex-direction: row;
+}
+.nav_links li{
+  padding: 20px;
+  list-style: none;
+}
+@media(max-width: 800px){
+  nav img{
+    height: 150px;
+    width: 150px;
+}
+.nav_links li{
+  padding: 10px;
+}
+}
+.nav_links li a{
+  text-decoration: none;
+}
+.nav_links .nav-li::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: rgba(89, 90, 97, 0.7);
+  display: block;
+  margin: 7px auto;
+  transition: 0.5s;
+}
+.nav_links .nav-li:hover::after{
+  width: 100%;
+}
+.fa.fa-bars{
+  display: none;
+}
+.fa-angle-up{
+  font-size: 20px !important;
+}
+.drop_down li{
+  padding: 10px;
+}
+.drop_down li a{
+    color: #000;
+}
+.drop_down{
+  color: black;
+  background-color: white;
+  border: 2px solid rgba(89, 90, 97, 0.7);
+  padding: 0;
+  position: absolute;
+  margin-left: 90px;
+  bottom: 70%;
+  transform: translateX(-50%);
+  z-index: 8;
+  opacity: 0;
+  transition: 0.4s;
+}
+#drop_down_btn:hover + .drop_down{
+  bottom: 77%;
+  opacity: 1;
+}
+/*navmedia-query start*/
+@media(max-width: 651px){
+  .fa.fa-bars{
+    display: block;
+    margin: 35px 10px;
+  }
+  .drop_down{
+    z-index: 4;
+    position: absolute;
+    bottom: 30%;
+  }
+  #drop_down_btn:hover + .drop_down{
+    bottom: 32%;
+  }
+  .nav_links{
+    position: fixed;
+    height: 700px;
+    top: 50px; /* Height of navbar */
+    z-index: 300;
+    left: 100%;
+    display: block;
+    width: 100%;
+    padding-right: 1rem;
+    margin: auto;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #DC143C;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  }
+
+  .nav_links.open {
+    display: block;
+    visibility: visible;
+    transform: translateX(-70%);
+  }
+  .nav_links li{
+    padding: 20px;
+  }
+}
+#drop_down_btn:hover{
+  transition: 0.5s;
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+/*navmedia-query end*/
+/*navbar end*/
+/*banner start*/
+.Banner{
+  position: absolute; 
+  background-position: fixed;
+  background-attachment: fixed;
+  height: 50vh;
+  overflow: hidden;
+  width: 100%;
+  border-top-left-radius: 30%;
+  background-image: url(images/happy-M4NZW2lOZ-transformed.jpeg);
+  z-index: 2;
+  height: fit-content;
+  background-repeat: no-repeat;
+  top: 15vh;
+  background-size: cover;
+}
+.text-box h1{
+  padding-top: 1000px;
+  line-height: 50px;
+  display: inline;
+  font-size: xx-large;
+}
+.text-box i::before{
+  padding: 5px;
+  display: inline-block;
+  content: 'Richer,';
+  animation-name: slide;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  font-size: xx-large;
+}
+@keyframes slide {
+  15%{
+    transform: translateY(20px);
+  }
+  35%{
+    transform: translateY(-20px);
+  }
+  55%{
+    transform: translateY(-20px);
+    content: 'Fuller,';
+    transform: translateY(10px);
+  }
+  75%{
+    content: 'Ritzy';
+  }
+}
+.text-box{
+  padding: 40px;
+  text-align: center;
+  background-color: grey;
+  opacity: 0.7;
+  margin: 100px;
+  width: 600px;
+}
+.text-box h1{
+  font-family: 'Zen Dots', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.text-box h4{
+  font-family: 'Tangerine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 40px;
+}
+.text-box p{
+  margin-top: 24px;
+}
+@media(max-width: 788px){
+  .text-box{
+    margin: 100px 0px;
+    width: 100%;
+  }
+}
+@media(max-width: 613px){
+  .Banner{
+    width: 100%;
+    top: 20vh;
+  }
+  .text-box{
+    margin: 50px 0;
+  }
+}
+@media(max-width: 498px){
+  .text-box{
+    width: 100%;
+    padding: 20px 5px;
+    margin: 0;
+  }
+  .Banner{
+    background-position: center;
+  }
+  .text-box h1{
+    font-size: 25px;
+  }
+  .text-box i::before{
+    padding: 0;
+  }
+}
+@media(max-width: 350px){
+ .Banner{
+  overflow: hidden;
+ }
+  nav img{
+    height: 120px;
+    width: 100px;
+  }
+  .text-box{
+    padding: 40px 0;
+  }
+  .text-box h4{
+    font-size: 30px;
+  }
+}
+.date{
+  float: right;
+}
+#grain{
+  transform: rotate(60deg);
+  margin-right: 1500px;
+}
+.cereal_biltz{
+  flex-wrap: wrap;
+  display: flex;
+  margin: 300px 0 30px 0px;
+  justify-content: space-around;
+  height: fit-content;
+}
+.cereal_biltz img{
+  flex-basis: 50%;
+}
+.cereal_biltz  > div{
+  text-align: center;
+  font-size: 10px;
+  flex-basis: 50%;
+  color: #fff;
+  background-color: #DC143C;
+  background-repeat: no-repeat;
+  align-items: center;
+  padding: 40px;
+  background-size: cover;
+}
+@media(max-width: 1000px){
+  .cereal_biltz img{
+    flex-basis: 80%;
+  }
+.cereal_biltz  > div{
+  flex-basis: 60%;
+}
+}
+@media(max-width: 730px){
+  .cereal_biltz{
+    height: 100%;
+  }
+  .cereal_biltz img{
+    flex-basis: 100%;
+  }
+  .cereal_biltz div{
+    flex-basis: 100%;
+  }
+}
+@media(max-width: 356px){
+  .cereal_biltz{
+    margin: 500px 0 0px 0;
+  }
+  }
+.product p{
+  padding-top: 30px;
+}
+@media(max-width: 500px){
+  .cereal_biltz > div{
+    padding: 10px;
+  }
+  .product p{
+    padding-top: 0;
+  }
+}
+/* Our Product End*/
+/*mission&vission start*/
+.Mission-vission{
+  background-image: url(images/kiddies.jpeg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 10px;
+  text-align: center;
+  align-items: center;
+  background-position: fixed;
+  background-attachment: fixed;
+}
+.mission-vission{
+  display: flex;
+  overflow: hidden;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.mission-vission div{
+  background-color: rgba(128, 128, 128, 0.589);
+  padding: 100px;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  color: white;
+  flex-basis: 40%;
+}
+.custom-header::before{
+  content: '';
+  width: 30px;
+  height: 3px;
+  background: white;
+  display: block;
+  text-align: center;
+  transition: 0.5s;
+  margin: 7px auto;
+}
+.custom-header{
+  text-shadow: 1px 1px 1px #000, 
+  3px 3px 5px goldenrod;
+  font-family: "Tangerine", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 50px;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+}
+.p-header{
+  text-align: center;
+  padding: 20px;
+}
+.mission-vission .fa{
+  padding: 0.5px 5px;
+}
+@media(max-width: 1200px){
+  .mission-vission div{
+    padding: 40px;
+  }
+}
+@media(max-width: 747px){
+  .mission-vission div{
+    flex-basis: 80%;
+  }
+}
+@media(max-width: 340px){
+  .mission-vission div{
+    padding: 10px;
+    flex-basis: 90%;
+  }
+  .custom-header{
+    font-size: 30px;
+  }
+}
+/*mission&vission end*/
+/*gallery start*/
+.gallery{
+  background-image: url(images/19449742.jpg);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 10px;
+  align-items: center;
+  background-position: fixed;
+  background-attachment: fixed;
+}
+.img-container{
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.img-container img{
+  margin: 20px;
+  flex-basis: 20%;
+}
+@media(max-width: 980px){
+  .img-container img{
+    flex-basis: 30%;
+    margin: 10px;
+  }
+}
+@media(max-width: 720px){
+  .img-container img{
+    flex-basis: 40%;
+    margin: 20px 10px;
+  }
+}
+@media(max-width: 540px){
+  .img-container img{
+    flex-basis: 70%;
+  }
+}
+@media(max-width: 500px){
+  .img-container img{
+    flex-basis: 95%;
+  }
+}
+@media(max-width: 250px){
+  .img-container img{
+    flex-basis: 100%;
+  }
+  .img-container{
+    margin: 0;
+  }
+}
+/*gallery end*/
+/*footer start*/
+.row{
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer{
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: auto;
+  padding-top: 20px;
+  padding-left: 30px;
+  /*background-image: linear-gradient(rgba(255, 217, 0, 0.322), rgba(0, 0, 255, 0.274)), url(images/craft-cms-custom-field-leveraging-platform-2.jpg);*/
+  line-height: 30px;
+  flex-wrap: wrap;
+}
+footer h1{
+  padding-bottom: 20px;
+}
+footer ul li{
+  list-style: none;
+}
+footer ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+footer i{
+  color: goldenrod;
+}
+.footer-col:first-child{
+  flex-basis: 40%;
+}
+.footer-col:nth-child(2){
+  flex-basis: 25%;
+}
+.footer-col:nth-child(3){
+  flex-basis: 25%;
+}
+footer .social-links i{
+  font-size: 20px;
+  padding-left: 20px;
+}
+.footer-bottoom {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media(max-width: 1125px) {
+  .footer-col{
+      flex-basis: 45%!important;
+  }
+  .footer-col:nth-child(3) {
+      padding-top: 30px!important;
+  }
+}
+@media(max-width: 771px) {
+  .footer-col{
+      flex-basis: 90%!important;
+  }
+  .footer-col:nth-child(2) {
+      padding-top: 30px!important;
+  }   
+}
+/*footer end*/
