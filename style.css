@@ -1,4 +1,4 @@
-@import url(http://db.onlinewebfonts.com/c/c230ecbf5e13583fc4c70a14726c9055?family=Tangerine);
+@import url(http://fonts.googleapis.com/css2?family=Tangerine);
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Nerko+One);
 @import url(https://fonts.googleapis.com/css2?family=Zen+Dots);
@@ -104,44 +104,31 @@ nav img{
     display: block;
     margin: 35px 10px;
   }
-  .drop_down{
-    z-index: 4;
-    position: absolute;
-    bottom: 30%;
-  }
-  #drop_down_btn:hover + .drop_down{
-    bottom: 32%;
-  }
   .nav_links{
-    position: fixed;
+    position: absolute;
     height: 700px;
     top: 50px; /* Height of navbar */
     z-index: 300;
-    left: 100%;
     display: block;
-    width: 100%;
+    width: 70%;
     padding-right: 1rem;
     margin: auto;
     padding-left: 1rem;
     overflow-y: auto;
     visibility: hidden;
+    transform: translateX(0%);
+    overflow: hidden;
     background-color: #DC143C;
     transition: transform .3s ease-in-out, visibility .3s ease-in-out;
   }
-
   .nav_links.open {
     display: block;
     visibility: visible;
-    transform: translateX(-70%);
+    transform: translateX(43%);
   }
   .nav_links li{
     padding: 20px;
   }
-}
-#drop_down_btn:hover{
-  transition: 0.5s;
-  transform: rotate(180deg);
-  cursor: pointer;
 }
 /*navmedia-query end*/
 /*navbar end*/
@@ -170,7 +157,7 @@ nav img{
 .text-box i::before{
   padding: 5px;
   display: inline-block;
-  content: 'Richer,';
+  content: 'Richer, ';
   animation-name: slide;
   animation-iteration-count: infinite;
   animation-duration: 10s;
@@ -185,11 +172,11 @@ nav img{
   }
   55%{
     transform: translateY(-20px);
-    content: 'Fuller,';
+    content: 'Fuller, ';
     transform: translateY(10px);
   }
   75%{
-    content: 'Ritzy';
+    content: 'Ritzy ';
   }
 }
 .text-box{
