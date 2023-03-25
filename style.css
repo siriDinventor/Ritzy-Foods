@@ -1,6 +1,6 @@
-@import url(http://fonts.googleapis.com/css2?family=Tangerine);
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Nerko+One);
+@import url(https://fonts.googleapis.com/css2?family=Tangerine);
 @import url(https://fonts.googleapis.com/css2?family=Zen+Dots);
 
 *{
@@ -152,6 +152,7 @@ nav img{
   padding-top: 1000px;
   line-height: 50px;
   display: inline;
+  font-family: 'Zen Dots', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: xx-large;
 }
 .text-box i::before{
@@ -187,12 +188,9 @@ nav img{
   margin: 100px;
   width: 600px;
 }
-.text-box h1{
-  font-family: 'Zen Dots', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
 .text-box h4{
-  font-family: 'Tangerine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 40px;
+  font-family: Tangerine;
+  font-size: 60px;
 }
 .text-box p{
   margin-top: 24px;
@@ -240,15 +238,8 @@ nav img{
     padding: 40px 0;
   }
   .text-box h4{
-    font-size: 30px;
+    font-size: 50px;
   }
-}
-.date{
-  float: right;
-}
-#grain{
-  transform: rotate(60deg);
-  margin-right: 1500px;
 }
 .cereal_biltz{
   flex-wrap: wrap;
@@ -306,6 +297,15 @@ nav img{
     padding-top: 0;
   }
 }
+@media (max-width: 234px) {
+  .cereal_biltz{
+    margin-top: 800px;
+  }
+  .cereal_biltz img{
+    height: 250px;
+    object-fit: fill;
+  }
+}
 /* Our Product End*/
 /*mission&vission start*/
 .Mission-vission{
@@ -346,8 +346,8 @@ nav img{
 .custom-header{
   text-shadow: 1px 1px 1px #000, 
   3px 3px 5px goldenrod;
-  font-family: "Tangerine", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 50px;
+  font-family: 'Tangerine', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 60px;
   overflow: hidden;
   text-align: center;
   color: white;
@@ -374,9 +374,6 @@ nav img{
   .mission-vission div{
     padding: 10px;
     flex-basis: 90%;
-  }
-  .custom-header{
-    font-size: 30px;
   }
 }
 /*mission&vission end*/
@@ -431,6 +428,16 @@ nav img{
     margin: 0;
   }
 }
+
+.whatsap_Icon{
+  display: block;
+  position: fixed;
+  height: 1000px;
+  margin-top: 0;
+  display: flex;
+  width: 100px;
+  background-color: green;
+}
 /*gallery end*/
 /*footer start*/
 .row{
@@ -442,13 +449,16 @@ nav img{
 footer{
   background-color: #1a1a1a;
   color: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: auto;
   padding-top: 20px;
   padding-left: 30px;
   /*background-image: linear-gradient(rgba(255, 217, 0, 0.322), rgba(0, 0, 255, 0.274)), url(images/craft-cms-custom-field-leveraging-platform-2.jpg);*/
   line-height: 30px;
   flex-wrap: wrap;
+}
+footer p{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+
 }
 footer h1{
   padding-bottom: 20px;
