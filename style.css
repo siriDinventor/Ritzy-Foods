@@ -17,13 +17,6 @@
 /*navbar start*/
 .header{
   color: white;
-  position: relative;
-  height: 150vh;
-}
-@media(max-width: 260px){
-  .header{
-    height: 200vh;
-  }
 }
 .header a{
   color: white;
@@ -125,15 +118,15 @@ nav img{
   position: absolute; 
   background-position: fixed;
   background-attachment: fixed;
-  height: fit-content;
+  height: 50vh;
   overflow: hidden;
   width: 100%;
   border-top-left-radius: 30%;
   background-image: url(images/happy-M4NZW2lOZ-transformed.jpeg);
   z-index: 2;
+  height: fit-content;
   background-repeat: no-repeat;
   top: 15vh;
-  margin-bottom: 300px;
   background-size: cover;
 }
 .text-box h1{
@@ -179,6 +172,9 @@ nav img{
 .text-box h4{
   font-family: Tangerine;
   font-size: 60px;
+}
+.text-box p{
+  margin-top: 24px;
 }
 @media(max-width: 788px){
   .Banner{
@@ -228,12 +224,10 @@ nav img{
 }
 .cereal_biltz{
   flex-wrap: wrap;
+  margin-top: 500px;
   display: flex;
-  position: relative;
-  margin: 30px 0 30px 0px;
   justify-content: space-around;
-  height: 80vh;
-  margin-bottom: 15vh;
+  height: fit-content;
 }
 .cereal_biltz img{
   flex-basis: 50%;
@@ -271,17 +265,13 @@ nav img{
 .product p{
   padding-top: 30px;
 }
-@media(max-width: 500px){
-  .cereal_biltz > div{
-    padding: 10px;
-  }
-  .product p{
-    padding-top: 0;
-  }
-}
+
 @media (max-width: 234px) {
+  .cereal_biltz{
+    margin-top: 600px;
+  }
   .cereal_biltz img{
-    height: 220px;
+    height: 250px;
     object-fit: fill;
   }
 }
